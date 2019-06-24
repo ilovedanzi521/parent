@@ -15,7 +15,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
-        <spring-cloud.version>Finchley.SR3</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <spring-boot-admin.version>2.0.6</spring-boot-admin.version>
         <HikariCP-version>3.3.1</HikariCP-version>
         <!--swagger  -->
@@ -23,7 +23,7 @@
         <cglib-nodep-version>3.2.5</cglib-nodep-version>
         <json-lib-version>2.4</json-lib-version>
         <fastjson-version>1.2.58</fastjson-version>
-        <mybatis-starter-version>2.0.1</mybatis-starter-version>
+        <mybatis-starter-version>1.3.4</mybatis-starter-version>
         <pagehelper-version>1.2.12</pagehelper-version>
         <oracle-jdbc-version>12.1.0.2</oracle-jdbc-version>
         <poi-version>3.14</poi-version>
