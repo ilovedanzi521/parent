@@ -27,6 +27,8 @@
         <HikariCP-version>3.3.1</HikariCP-version>
         <!--swagger  -->
         <springfox-version>2.9.2</springfox-version>
+        <swagger-annotations>1.5.21</swagger-annotations>
+        <swagger-models>1.5.21</swagger-models>
         <cglib-nodep-version>3.2.5</cglib-nodep-version>
         <json-lib-version>2.4</json-lib-version>
         <fastjson-version>1.2.58</fastjson-version>
@@ -157,6 +159,16 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${springfox-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger-annotations}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>${swagger-models}</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
