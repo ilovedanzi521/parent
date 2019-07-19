@@ -16,7 +16,7 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/>
     </parent>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -44,6 +44,8 @@
         <hutool-version>4.5.13</hutool-version>
         <lombok-version>1.18.8</lombok-version>
         <easypoi-version>4.1.0</easypoi-version>
+        <activiti.version>5.22.0</activiti.version>
+        <apache.xmlgraphics.version>1.7</apache.xmlgraphics.version>
     </properties>
 
     <dependencyManagement>
@@ -139,7 +141,7 @@
             <artifactId>easypoi-annotation</artifactId>
             <version>${easypoi-version}</version>
         </dependency>
-        
+
 
         <!--解析PDF -->
         <dependency>
@@ -211,6 +213,51 @@
               <version>2.6</version>
           </dependency>
 
+          <!-- activiti-->
+
+          <dependency>
+              <groupId>org.activiti</groupId>
+              <artifactId>activiti-spring-boot-starter-basic</artifactId>
+              <version>${activiti.version}</version>
+          </dependency>
+
+          <dependency>
+              <groupId>org.activiti</groupId>
+              <artifactId>activiti-json-converter</artifactId>
+              <version>${activiti.version}</version>
+              <exclusions>
+                  <exclusion>
+                      <groupId>org.activiti</groupId>
+                      <artifactId>activiti-bpmn-model</artifactId>
+                  </exclusion>
+              </exclusions>
+          </dependency>
+
+          <dependency>
+              <groupId>org.apache.xmlgraphics</groupId>
+              <artifactId>batik-codec</artifactId>
+              <version>${apache.xmlgraphics.version}</version>
+          </dependency>
+          <dependency>
+              <groupId>org.apache.xmlgraphics</groupId>
+              <artifactId>batik-css</artifactId>
+              <version>${apache.xmlgraphics.version}</version>
+          </dependency>
+          <dependency>
+              <groupId>org.apache.xmlgraphics</groupId>
+              <artifactId>batik-svg-dom</artifactId>
+              <version>${apache.xmlgraphics.version}</version>
+          </dependency>
+          <dependency>
+              <groupId>org.apache.xmlgraphics</groupId>
+              <artifactId>batik-svggen</artifactId>
+              <version>${apache.xmlgraphics.version}</version>
+          </dependency>
+          <dependency>
+              <groupId>org.activiti</groupId>
+              <artifactId>activiti-spring-boot-starter-jpa</artifactId>
+              <version>${activiti.version}</version>
+          </dependency>
       </dependencies>
     </dependencyManagement>
 
