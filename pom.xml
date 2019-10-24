@@ -49,7 +49,7 @@
 		<apache.xmlgraphics.version>1.7</apache.xmlgraphics.version>
 		<guava.version>23.0</guava.version>
 		<apollo.version>1.1.0</apollo.version>
-		<easypoi.version>4.0.0</easypoi.version>
+		<easypoi.version>4.1.0</easypoi.version>
 	</properties>
 
 	<dependencyManagement>
@@ -128,24 +128,6 @@
 				<artifactId>jedis</artifactId>
 				<version>${jedis-version}</version>
 			</dependency>
-
-			<!-- ******************关于EASYPOI相关包***************** -->
-			<dependency>
-				<groupId>cn.afterturn</groupId>
-				<artifactId>easypoi-base</artifactId>
-				<version>${easypoi-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>cn.afterturn</groupId>
-				<artifactId>easypoi-web</artifactId>
-				<version>${easypoi-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>cn.afterturn</groupId>
-				<artifactId>easypoi-annotation</artifactId>
-				<version>${easypoi-version}</version>
-			</dependency>
-
 
 			<!--解析PDF -->
 			<dependency>
@@ -272,7 +254,7 @@
 				<artifactId>apollo-client</artifactId>
 				<version>${apollo.version}</version>
 			</dependency>
-			<!-- easypoi -->
+			<!-- ******************关于EASYPOI相关包***************** -->
 			<dependency>
 				<groupId>cn.afterturn</groupId>
 				<artifactId>easypoi-spring-boot-starter</artifactId>
