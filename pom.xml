@@ -22,9 +22,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<repository.url>http://maven.yhfin.club:81/nexus/content/groups/public/</repository.url>
-		<releases.url>http://maven.yhfin.club:81/nexus/content/repositories/releases/</releases.url>
-		<snapshot.url>http://maven.yhfin.club:81/nexus/content/repositories/snapshots/</snapshot.url>
 		<spring-boot.version>2.1.6.RELEASE</spring-boot.version>
 		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
 		<spring-boot-admin.version>2.0.6</spring-boot-admin.version>
@@ -52,6 +49,12 @@
 		<guava.version>23.0</guava.version>
 		<apollo.version>1.1.0</apollo.version>
 		<easypoi.version>4.1.0</easypoi.version>
+		<eureka-consul-adapter.version>1.1.0</eureka-consul-adapter.version>
+		<micrometer-registry-prometheus.version>1.1.3</micrometer-registry-prometheus.version>
+		<kafka.version>2.3.0</kafka.version>										
+		<logback-kafka-appender.version>0.1.0</logback-kafka-appender.version>										
+		<logstash-logback-encoder.version>4.11</logstash-logback-encoder.version>										
+		<dfas-exporter-microservice.version>0.0.1-SNAPSHOT</dfas-exporter-microservice.version>
 	</properties>
 
 	<dependencyManagement>
@@ -262,37 +265,44 @@
 				<artifactId>easypoi-spring-boot-starter</artifactId>
 				<version>${easypoi.version}</version>
 			</dependency>
+			
+			<!-- kafka日志监控 -->
+		        <dependency>
+	            <groupId>at.twinformatics</groupId>
+	            <artifactId>eureka-consul-adapter</artifactId>
+	            <version>${eureka-consul-adapter.version}</version>
+	        </dependency>
+        
+			<dependency>							
+			    <groupId>net.logstash.logback</groupId>							
+			    <artifactId>logstash-logback-encoder</artifactId>							
+			    <version>${logstash-logback-encoder.version}</version>							
+			</dependency>
+			
+			<dependency>							
+			    <groupId>com.github.danielwegener</groupId>							
+			    <artifactId>logback-kafka-appender</artifactId>							
+			    <version>${logback-kafka-appender.version}</version>							
+			</dependency>
+										
+			<dependency>							
+			    <groupId>org.apache.kafka</groupId>							
+			    <artifactId>kafka-clients</artifactId>							
+			    <version>${kafka.version}</version>							
+			</dependency>
+										
+			<dependency>	
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-registry-prometheus</artifactId>
+				<version>${micrometer-registry-prometheus.version}</version>
+			</dependency>	
+			
+			<dependency>							
+			    <groupId>com.win.dfas</groupId>							
+			    <artifactId>dfas-exporter-microservice</artifactId>							
+			    <version>${dfas-exporter-microservice.version}</version>							
+			</dependency>
+				
 		</dependencies>
 	</dependencyManagement>
-
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>Snapshots</name>
-			<url>${snapshot.url}</url>
-		</snapshotRepository>
-		<repository>
-			<id>releases</id>
-			<name>Releases</name>
-			<url>${releases.url}</url>
-		</repository>
-	</distributionManagement>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>nexus</id>
-			<name>local private nexus</name>
-			<url>${repository.url}</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
-
 </project>
